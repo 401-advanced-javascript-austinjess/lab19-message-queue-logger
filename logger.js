@@ -1,5 +1,5 @@
+require('dotenv').config();
 const Q = require('@nmq/q/client');
-
 const db = new Q('database');
 const files = new Q('files');
 
@@ -34,3 +34,5 @@ db.subscribe('error', (payload) => {
 });
 
 console.log(db.subscriptions());
+
+module.exports = db;
